@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+    <h1>Home Page</h1>
+    <form id="duty_day_group_form" method="get" action="{% url 'index' %}" class="form-section__form">
+        {% csrf_token %}
+        <h3>Enter day and group id to find duty</h3>
+        <h3>Or enter just day to find all duties by this</h3>
+        <div class="form-section__item">
+            <label for="id_day" class="form-section__label">Enter day</label>
+            <input type="number" name="day" class="form-control" required id="id_day">
+        </div>
+        <div class="form-section__item">
+            <label for="id_group_id" class="form-section__label">Enter group id</label>
+            <input type="number" name="group_id" class="form-control" id="id_group_id">
+        </div>
+        <button type="submit">Enter</button>
+    </form>
+    <a href="{% url 'calendar_table' %}">Calendar table</a>
+{% endblock %}

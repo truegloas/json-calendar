@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Duty by day and group
+{% endblock %}
+
+{% block content %}
+    <a href="{% url 'index' %}">Back to Home Page</a>
+    <div class="duty__block">
+        <p class="duty__item">{{ userName }}</p>
+        <p class="duty__item">{{ userEmail }}</p>
+        <p class="duty__item">{{ userPhone }}</p>
+        <p class="duty__item">{{ groupName }}</p>
+    </div>
+{% endblock %}

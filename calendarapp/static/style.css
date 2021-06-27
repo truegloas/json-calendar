@@ -1,0 +1,12 @@
+.section-duty {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.form-section__form {
+    margin-bottom: 2vh;
+}
+
+.duty__block {
+    border: 1px solid black;
+}
